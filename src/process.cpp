@@ -208,7 +208,11 @@ namespace proc {
   }
 
   app_t::~app_t() {
-    terminate();
+    try {
+      terminate();
+    } catch (const std::exception &e) {
+      BOOST_LOG(fatal) << "Exception in `app_t` destructor: " << e.what();
+    }
   }
 
   std::optional<int> app_t::get_app_id() {
