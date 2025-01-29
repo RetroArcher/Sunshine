@@ -122,7 +122,7 @@ namespace proc {
       // detached process executing again while the previous process is still running.
       _output_pipe.reset(_wfsopen(woutput.c_str(), L"a", _SH_DENYNO));
 #else
-      _output_pipe.reset(fopen(_app.output.c_str(), "a"));
+      _output_pipe.reset(fopen(_context.output.c_str(), "a"));
 #endif
     }
 
