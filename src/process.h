@@ -227,7 +227,7 @@ namespace proc {
    * @brief Parse the string and replace any "$(...)" patterns with a value from env.
    * @param env Environment to be used as a source for replacement.
    * @param val_raw Raw string to be parsed.
-   * @returns Strings with replacements made (if any) with values from env. 
+   * @returns Strings with replacements made (if any) with values from env.
    * @warning This function throws if the `val_raw` is ill-formed.
    */
   std::string parse_env_val(const boost::process::v1::native_environment &env, std::string_view val_raw);
@@ -235,11 +235,11 @@ namespace proc {
   /**
    * @brief Validate the image path.
    * @param app_image_path File path to validate.
-   * 
+   *
    * Requirements:
    *  - images must be of `.png` file ending
    *  - image file must exist (can be relative to the `assets` directory).
-   * 
+   *
    * @returns Validated image path on success, default image path on failure.
    */
   std::string validate_app_image_path(const std::string &app_image_path);
@@ -265,7 +265,7 @@ namespace proc {
    * @param app_index App index in the app list.
    * @return Tuple of id calculated without index (for use if no collision) and one with.
    */
-  std::tuple<std::string, std::string> calculate_app_id(const std::string &app_name, const std::string& app_image_path, int app_index);
+  std::tuple<std::string, std::string> calculate_app_id(const std::string &app_name, const std::string &app_image_path, int app_index);
 
   /**
    * @brief Parse the app list file.
