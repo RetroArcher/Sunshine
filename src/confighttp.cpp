@@ -580,7 +580,7 @@ namespace confighttp {
       fileTree.add_child("apps", sorted_apps);
 
       pt::write_json(config::stream.file_apps, fileTree);
-      proc::refresh(config::stream.file_apps);
+      proc::proc.refresh(config::stream.file_apps);
 
       outputTree.put("status", true);
       send_response(response, outputTree);
@@ -634,7 +634,7 @@ namespace confighttp {
       fileTree.push_back(std::make_pair("apps", newApps));
 
       pt::write_json(config::stream.file_apps, fileTree);
-      proc::refresh(config::stream.file_apps);
+      proc::proc.refresh(config::stream.file_apps);
 
       outputTree.put("status", true);
       outputTree.put("result", "application "s + std::to_string(index) + " deleted");
