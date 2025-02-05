@@ -1151,6 +1151,7 @@ namespace config {
 
     string_f(vars, "external_ip", nvhttp.external_ip);
     list_prep_cmd_f(vars, "global_prep_cmd", config::sunshine.prep_cmds);
+    int_f(vars, "max_bitrate", nvhttp.max_bitrate);
 
     string_f(vars, "audio_sink", audio.sink);
     string_f(vars, "virtual_sink", audio.virtual_sink);
